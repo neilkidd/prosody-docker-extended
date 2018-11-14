@@ -24,5 +24,11 @@ if [[ $(id -u) -eq $(id -u prosody) ]]; then
     if [[ $1 == "prosody" && -n $LOCAL &&  -n $PASSWORD && -n $DOMAIN ]]; then
         prosodyctl register $LOCAL $DOMAIN $PASSWORD
     fi
+    
+    # Accounts required by the GOOS book.
+    prosodyctl register sniper localhost sniper
+    prosodyctl register auction-item-54321 localhost auction
+    prosodyctl register auction-item-65432 localhost auction
+    
 fi
 exec "$@"
