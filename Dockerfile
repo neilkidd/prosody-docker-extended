@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER Victor Kulichenko <onclev@gmail.com>
+MAINTAINER Neil Kidd <neil.a.kidd@gmail.com>
 COPY prosody.list /etc/apt/sources.list.d/
 COPY ./entrypoint.sh /usr/bin/entrypoint.sh
 COPY ./update-modules.sh /usr/bin/update-modules
